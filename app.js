@@ -1,4 +1,4 @@
-const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
 const dropdowns = document.querySelectorAll(".dropDown Select");
 
@@ -52,7 +52,7 @@ const updateExchangeRate = async (evt) => {
     amtVal = 1; 
     amount.value = "1";   
   } 
-  const URL = `${BASE_URL}/${from.value.toLowerCase()}/${to.value.toLowerCase()}.json`;
+  const URL = `${BASE_URL}/${from.value.toLowerCase()}.json`;
   let exRate = await fetch(URL);
   let data = await exRate.json();
   // let rate = data[to.value.toLowerCase()];
